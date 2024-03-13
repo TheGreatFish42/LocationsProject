@@ -11,4 +11,4 @@
     * git clone -b part-1-end https://github.com/v-school/rlm-token-auth-series-context.git
     * cd rlm-token-auth-series-context
     * code .
-    * run npm install to get dependencies
+    * run npm install to get dependencies# LocationsProject
