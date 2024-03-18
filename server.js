@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors');
 const app = express()
 require('dotenv').config()
 const morgan = require('morgan')
@@ -7,15 +8,18 @@ const {expressjwt} = require('express-jwt')
 
 app.use(express.json())
 app.use(morgan('dev'))
+app.use(cors())
 
+mongoose.set('strictQuery', false);
 mongoose.connect(
-  'mongodb://localhost:27017/user-authentication',
+  'mongodb+srv://jacobifisher:ftn807Jul11!@cluster0.wwuui84.mongodb.net/Nomad',
   () => console.log('Connected to the DB')
 )
 
-app.use('/auth', require('./routes/authRouter.js'))
+app.use('/auth', require('./routes/authRouter.jsx'))
 app.use('/api', expressjwt({ secret: process.env.SECRET, algorithms: ['HS256'] })) // req.user
-app.use('/api/todo', require('./routes/todoRouter.js'))
+app.use('/api/post', require('./routes/postRouter.jsx'))
+app.use('/api/comments', require('./routes/commentRouter.jsx'))
 
 app.use((err, req, res, next) => {
   console.log(err)

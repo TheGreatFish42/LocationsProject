@@ -1,0 +1,146 @@
+:root {
+  color-scheme: light dark;
+  color: rgba(15, 15, 15, 0.993);
+  background-color: #DADDC5;
+}
+
+#root{
+  margin-top: 5vh;
+  min-height: 100vh;
+}
+
+.auth-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin-left: 30vw;
+}
+
+.auth-container > h1 {
+  font-size: 2em;
+  margin: 24px;
+}
+
+.auth-container > p {
+  margin: 16px;
+  text-decoration: underline;
+}
+
+.auth-container > form {
+  border: 1px solid #3339;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #aaa9;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container > form > input {
+  margin: 16px 8px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.auth-container > form > button {
+  align-self: center;
+  
+  border-radius: 4px;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1, h2, h3{
+  margin:0;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.app{
+  top: 0;
+}
+
+.navbar{
+  position: absolute;
+  top: 0;
+  height: 5vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post{
+  display: grid;
+  grid-template-columns: 45% 45% 10% auto;
+  grid-template-rows: 25vh 10vh;
+  gap: 1vh;
+  border: 2px solid #283A2C;
+  background-color: #DADDC5;
+  margin-left: 10vw;
+  width:80vw;
+  height:36vh;
+}
+
+.post img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.post-text{
+  grid-row: 0 / 1;
+  grid-column: 0 / 1;
+}
+
+#delete-button{
+  grid-row: 0 / 1;
+  grid-column: 0 / 1;
+  width: 50px;
+}
+
+.upvotes{
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
+
+#comment-button{
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+}
+
+.comments{
+  margin-left: 10vw;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-family: inherit;
+  background-color: #283A2C;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  height: 20px;
+  width: 80px;
+}
+button:hover {
+  border-color: #F1EFEC;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
